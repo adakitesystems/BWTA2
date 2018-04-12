@@ -3,6 +3,7 @@
 #include "Heap.h"
 #include "MapData.h"
 #include "Pathfinding.h"
+#include "stdafx.h"
 
 namespace BWTA
 {

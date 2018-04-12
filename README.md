@@ -1,44 +1,21 @@
 # BWTA2 #
 
-BWTA2 is a fork of [BWTA](https://code.google.com/p/bwta), an add-on for [BWAPI](https://github.com/bwapi/bwapi) that analyzes the map and computes the regions, chokepoints, and base locations. 
-The original BWTA is only aimed to analyze "normal" maps, i.e. ICCup maps or other competitive starcraft maps. So don't be surprised if it crashes or produces strange results for maps like [Crystallis](http://classic.battle.net/images/battle/scc/lp/bw02/cy.jpg) or other [money maps](http://starcraft.wikia.com/wiki/Money_maps).
+This is a fork of [BWTA2](https://bitbucket.org/auriarte/bwta2) and has been modified by [Adakite](https://github.com/adakitesystems) to compile on GNU/Linux for use with OpenBW's  [BWAPI fork](https://github.com/OpenBW/bwapi) (2018-04-12).
 
-BWTA2 offers more functionalities (see **[Release Notes](https://bitbucket.org/auriarte/bwta2/wiki/Release%20Notes)**) and compatibility with BWAPI 4.
+## Instructions
 
-**[Download](https://bitbucket.org/auriarte/bwta2/downloads)** the last version and follow the **[starting guide](https://bitbucket.org/auriarte/bwta2/wiki/Getting%20Started)**
+The Makefile scripts assume the following directory structure:
+````
+bwapi/
+openbw/
+BWTA2/
+````
+*Note: `BWTA2/` will not exist until you clone this repository.*
 
-## Citing this work ##
+Run the following commands:
+````
+git clone https://github.com/adakitesystems/BWTA2.git
+cd BWTA2/ && make
+````
 
-If you use `BWTA2` for academic research, you are highly encouraged (though not required) to cite the following paper:
-
-```
-#!TeX
-@inproceedings{uriarte16b,
-  author    = {Uriarte, Alberto and Onta\~{n}\'{o}n, Santiago},
-  title     = {Improving Terrain Analysis and Applications to RTS Game AI},
-  booktitle = {AIIDE},
-  year      = {2016}
-}
-```
-
-## Information for developers ##
-
-CGAL library is used to create the [Segment Delaunay Graph](http://doc.cgal.org/latest/Segment_Delaunay_graph_2/index.html). [How to install](http://www.cgal.org/windows_installation.html) (only if you need to compile the project).
-
-There are two different branches:
-
-* **master**: It has the project in VS2013 and it is under maintenance.
-* **vs2008**: It is the old BWTA (VS2008) with some extra features (not planning to update anymore). 
-
-## Dependencies ##
-* **master**
-    * BWAPI 4.1.2
-    * Boost 1.56
-    * CGAL 4.4
-    * Qt 5.3.0 (only for debugging)
-    * StormLib (only for off-line map analysis)
-* **vs2008**
-    * BWAPI 3.7.4
-    * Boost 1.40
-    * CGAL 3.5
-    * Qt 4.6.3 (only for debugging)
+If the build was successful and complete, you should see a `Release/libBWTA2.so` file.

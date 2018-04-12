@@ -1,7 +1,9 @@
 /.dep.inc
-/Makefile
+#/Makefile
 /include/boost/
-/nbproject/
+#/nbproject/
+/nbproject/private/
+/nbproject/*.xml
 
 # Custom Build results
 Release-Log/
