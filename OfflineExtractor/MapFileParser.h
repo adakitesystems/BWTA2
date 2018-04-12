@@ -2,6 +2,10 @@
 
 #include "../BWTA/Source/MapData.h"
 
+#if !defined(_MSCV) && !defined(_MSC_VER) && !defined(WIN32) && !defined(_WINDOWS)
+typedef unsigned long DWORD;
+#endif
+
 namespace BWTA
 {
 	const std::string tileSetName[9] = { "badlands", "platform", "install", "ashworld",

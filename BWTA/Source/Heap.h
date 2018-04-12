@@ -1,5 +1,9 @@
 #pragma once
+
+#include <map>
 #include <utility>
+#include <vector>
+
 namespace BWTA
 {
 
@@ -165,7 +169,7 @@ namespace BWTA
     data.pop_back();
     if (data.empty())
       return;
-    std::map<_Tp,int>::iterator iter=mapping.find(data.front().first);
+    const auto &iter=mapping.find(data.front().first);
     if (iter!=mapping.end())
     {
       (*iter).second=0;
@@ -191,7 +195,7 @@ namespace BWTA
   template <class _Tp, class _Val>
   bool Heap<_Tp,_Val>::set(_Tp& x,_Val& v)
   {
-    std::map<_Tp,int>::iterator iter=mapping.find(x);
+    const auto &iter=mapping.find(x);
     if (iter==mapping.end())
     {
       push(std::make_pair(x,v));
@@ -212,7 +216,7 @@ namespace BWTA
   template <class _Tp, class _Val>
   const _Val& Heap<_Tp,_Val>::get(_Tp& x) const
   {
-    std::map<_Tp,int>::const_iterator iter=mapping.find(x);
+    const auto &iter=mapping.find(x);
     int index=(*iter).second;
     return data[index].second;
   }
@@ -221,7 +225,7 @@ namespace BWTA
   template <class _Tp, class _Val>
   bool Heap<_Tp,_Val>::contains(_Tp& x) const
   {
-    std::map<_Tp,int>::const_iterator iter=mapping.find(x);
+    const auto &iter=mapping.find(x);
     return (iter!=mapping.end());
   }
 
@@ -244,7 +248,7 @@ namespace BWTA
   template <class _Tp, class _Val>
   bool Heap<_Tp,_Val>::erase(_Tp& x)
   {
-    std::map<_Tp,int>::iterator iter=mapping.find(x);
+    auto &iter=mapping.find(x);
     if (iter==mapping.end())
       return false;
     if (data.size()==1)

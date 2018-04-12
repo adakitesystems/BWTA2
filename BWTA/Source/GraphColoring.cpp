@@ -69,7 +69,10 @@ namespace BWTA
 			// temp is the neighbors in common of tmp_y
 			// and the vertices colored ColorNumber
 			temp = 0;
-			for (auto& s : scanned) s = false; // reset scanned values in order to check all 
+                        for (auto it = scanned.begin(); it != scanned.end(); ++it) {
+                            // reset scanned values in order to check all 
+                            *it = false;
+                        }
 			//the vertices if they are adjacent to i-th vertex in NN
 			for (size_t x = 0; x < color.size(); ++x) {
 				if (color[x] == colorNumber) { // find one vertex colored ColorNumber

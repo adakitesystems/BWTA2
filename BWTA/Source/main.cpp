@@ -1,3 +1,5 @@
+#if defined(WIN32) || defined(_WINDOWS) || defined(_MSCV) || defined(_MSC_VER)
+
 #include <windows.h>
 
 #include "../OfflineExtractor/MapFileParser.h"
@@ -362,3 +364,5 @@ BWAPI::TilePosition findFarthestTile(const std::vector<BWAPI::TilePosition>& til
 
 	return returnTile;
 }
+
+#endif

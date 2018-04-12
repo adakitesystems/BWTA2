@@ -1,7 +1,10 @@
 #pragma once
 
-#include "Heap.h"
 #include <BWTA/Polygon.h>
+
+#include "Heap.h"
+#include "MapData.h"
+#include "stdafx.h"
 
 // geometry typedefs
 using BoostSegment = boost::geometry::model::segment<BoostPoint>;

@@ -1,3 +1,6 @@
+#ifndef __STDAFX_H__843277f30c045b71f5603638594ff609____
+#define __STDAFX_H__843277f30c045b71f5603638594ff609____
+
 #pragma message("Compiling precompiled headers (you should see this only once)")
 
 #define WIN32_LEAN_AND_MEAN		// Exclude rarely-used stuff from Windows headers
@@ -45,4 +48,6 @@ const std::string LOG_FILE_PATH = "bwapi-data/logs/BWTA.log";
 #define LOG(message) { \
 	  std::ofstream logFile(LOG_FILE_PATH , std::ios_base::out | std::ios_base::app ); \
 	  logFile << message << std::endl; }
+#endif
+
 #endif

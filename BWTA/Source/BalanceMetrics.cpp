@@ -1,5 +1,7 @@
 #include "BalanceMetrics.h"
 
+#include "stdafx.h"
+
 namespace BWTA
 {
 	void balanceAnalysis()

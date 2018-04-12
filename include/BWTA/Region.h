@@ -1,4 +1,7 @@
 #pragma once
+
+#include <set>
+
 #include <BWAPI.h>
 
 namespace BWTA

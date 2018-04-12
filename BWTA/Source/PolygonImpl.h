@@ -1,6 +1,8 @@
 #pragma once
 #include <BWTA/Polygon.h>
 
+#include "stdafx.h"
+
 namespace BWTA 
 {
 	class PolygonImpl : public Polygon

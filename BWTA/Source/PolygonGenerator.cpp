@@ -1,6 +1,5 @@
 #include "PolygonGenerator.h"
 
-#include <boost/geometry/extensions/algorithms/dissolve.hpp>
 #include "Utils.h"
 
 namespace BWTA

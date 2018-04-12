@@ -1,3 +1,8 @@
+/.dep.inc
+/Makefile
+/include/boost/
+/nbproject/
+
 # Custom Build results
 Release-Log/
 ReleaseOffline/
@@ -65,3 +70,4 @@ ipch/
 *.pidb
 *.svclog
 *.scc
+/dist/
